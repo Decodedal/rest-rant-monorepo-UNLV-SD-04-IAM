@@ -9,7 +9,7 @@ workflows:
           app-dir: ~/project/backend
       - eb/deploy:
           app-dir: ~/project/backend
-          context: aws-creds
+          context: aws-creds2
           application-name: Project
           environment-name: project-env
           filters:
@@ -19,4 +19,5 @@ workflows:
           label: version-<<pipeline.number>>
           requires:
             - node/test
+
 
